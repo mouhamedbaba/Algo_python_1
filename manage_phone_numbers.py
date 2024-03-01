@@ -18,6 +18,8 @@ def check_number_validity(number):
         return False
     if len(number) != 9:
         return False
+    if not number.isdigit():
+        return False
     return True
 
 def manage_number():
@@ -44,7 +46,7 @@ def run_exo_4():
     if len(numbers[0])>len(numbers[1]):
         len_n = len(numbers[0])
     else :
-        len_n = len_n(numbers[1])
+        len_n = len(numbers[1])
     for i in range(len_n):
         print(f"\n{numbers[0][i] if i < len(numbers[0]) else empty} \t | \t {numbers[1][i] if i < len(numbers[1]) else empty}")
                 
