@@ -1,25 +1,28 @@
+# importation des modules permettant de lancer un exercice
+
 from display_mounth import run_exo_1
-from manage_phone_numbers import run_exo_4
+from remove_unness_espace import run_exo_2
 from manage_sentence import run_exo_3
+from manage_phone_numbers import run_exo_4
 from matrice_color_carre import run_exo_5
 from matrice_diagonal import run_exo_6
-from remove_unness_espace import run_exo_2
+from utils import display_menu
 
 
+#  PROCEDURE permettant d'afficher le menu des exercice et de les lancer selon l'exercie choisie
 def run():
+    menu = {
+        "1":" AFFICHAGE MOIS ENG/FR ",
+        "2":" SUPPRIMER ESPACE UNITULES ",
+        "3":" CORRECTION PHRASES ",
+        "4":" SAISI NUMEROS ",
+        "5":" MATRICE COULEURS ",
+        "6":" MATRICE Diagonal ", 
+        "7":" CLAVIER TOUCHE ",
+        "0":" QUITTER "
+    }
     while True:
-        print()
-        print(" "*10 , "==============> EXERCICES ALOGOS PYTHON <===================")
-        print()
-        print("1 :  AFFICHAGE MOIS ENG/FR ")
-        print("2 :  SUPPRIMER ESPACE UNITULES ")
-        print("3 :  CORRECTION PHRASES ")
-        print("4 :  SAISI NUMEROS ")
-        print("5 :  MATRICE COULEURS ")
-        print("6 :  MATRICE Diagonal ") 
-        print("7 :  CLAVIER TOUCHE ")
-        print("0 :  QUITTER ")
-        
+        display_menu(menu, ul_dec="number", choix="exercices")
         option = input("\nVeuillez choisir un exercice : ")
         if option == "1":
             run_exo_1()
@@ -37,6 +40,7 @@ def run():
             print(" "*10 , "==============> AU REVOIR <===================")
             break
         else:
-            print("   OPTION NON VALIDE")
-            
+            print("OPTION NON VALIDE")
+
+#  appel a la fonction run pour executer le programe
 run()

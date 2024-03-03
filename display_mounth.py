@@ -1,7 +1,8 @@
+# creation de des liste de mois en anglais et en francais
 month_french = ["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","decembre",]
 month_english = ["january","february","march","april","may","june","july","august","september","october","november","december",]
 
-# creer la fonction pour diviser la liste en matrice
+# creer la FONCTION pour diviser la liste en matrice
 def mouth_matrice_3_4(mouth):
     matrice = []
     for i in range(4):
@@ -10,11 +11,8 @@ def mouth_matrice_3_4(mouth):
             matrice[i].append(mouth[i*3+j])
     return matrice
 
-#  creer les matrices pour chaque liste
-french_mounth_matrice = mouth_matrice_3_4(month_french)
-english_mounth_matrice = mouth_matrice_3_4(month_english)
 
-#  procedure affichage mounth
+#  PROCEDURE affichage mounth
 def display_mount(mouth):
     for i in range(3):
         print("-"*59)
@@ -24,8 +22,12 @@ def display_mount(mouth):
     print("-"*59)
         
 
-
+# PROCEDURE permettant d'afficher le tableu de mois et de changer de langue
 def run_exo_1():
+    #  creer les matrices pour chaque liste en faisant appel a la FONCTION
+    french_mounth_matrice = mouth_matrice_3_4(month_french)
+    english_mounth_matrice = mouth_matrice_3_4(month_english)
+
     print()
     print(" "*30, "======> FRANCAIS <======")
     print()
