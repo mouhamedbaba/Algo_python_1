@@ -11,7 +11,7 @@ def choose_color_poition():
     positions = ["haut", "bas"]
     color = input("\nQUELLE COULEUR VOULEZ VOUS MODIFIER ? [BLEU/ROUGE] ".lower().capitalize())
     while color not in colors:
-       color= input("\nVeuillez choisir une couleur entre rouge et bleu : ")
+        color= input("\nVeuillez choisir une couleur entre rouge et bleu : ")
     position = input("\nDans quelle position voulez vous placer la couleur ? ")
     while position not in positions:
         position = input("\nVeuillez choisir une position entre haut et bas : ")
@@ -20,9 +20,6 @@ def choose_color_poition():
 def fill_matrice(matrice, color, position):
     bleu = "\033[91m0\033[0m"
     rouge = "\033[94m0\033[0m"
-    for line in range(len(matrice)):
-        for i in range(len(matrice)):
-            matrice[line][i] = bleu if color == "rouge" else rouge
     if position == "haut":
         for i in range(len(matrice) // 2):
             for j in range(len(matrice[0])):
@@ -44,6 +41,4 @@ def run_exo_5():
             print("  ",i, end="\t")
         print()
     print("]")
-
-          
 

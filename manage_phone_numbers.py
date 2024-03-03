@@ -34,8 +34,10 @@ def manage_number():
         if isvalid == True:
             numbers[0].append(number)
         else :
-           numbers[1].append(number)
+            numbers[1].append(number)
     return numbers
+
+
 
 def run_exo_4():
     empty = "---------"
@@ -49,5 +51,3 @@ def run_exo_4():
         len_n = len(numbers[1])
     for i in range(len_n):
         print(f"\n{numbers[0][i] if i < len(numbers[0]) else empty} \t | \t {numbers[1][i] if i < len(numbers[1]) else empty}")
-                
-            

@@ -15,3 +15,21 @@ def remove_unnecessary_space(sentence):
             new_sentence = new_sentence + char
         prev_char = char
     return new_sentence
+
+def display_matrice(matrice: list):
+    print("\n[")  
+    for line in matrice :
+        for i in line:
+            print("  ",i, end="\t")
+        print()
+    print("]")
+    
+def get_ordre() -> int:
+    ordre = input("\nOrdre de votre de matrice : ")
+    while not ordre.isdigit() :
+        ordre = input("\nOrdre de votre de matrice doit etre un int : ")
+    
+    while int(ordre) < 4 : 
+        ordre = input("\nOrdre de votre de matrice doit etre superieur a 4 : ")
+    return int(ordre)
+                
