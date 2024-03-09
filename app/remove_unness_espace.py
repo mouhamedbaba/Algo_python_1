@@ -1,5 +1,5 @@
 # importation de la FONCTION permettant de suprimer les espaces inutules
-from utils import remove_unnecessary_space, get_sentence
+from utils.util import remove_unnecessary_space, get_sentence
 
 
 # PROCEDURE permettant de d'afficher le phrase corrige
@@ -9,4 +9,4 @@ def run_exo_2():
     sentence = remove_unnecessary_space(sentence)
     print()
     print("\nPhrase corrigee : ", sentence)
-    
+

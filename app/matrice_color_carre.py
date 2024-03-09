@@ -1,5 +1,5 @@
 # imporation des fonction pour recuperer l'ordre d'une matrice et la creation d'une matrice
-from utils import create_matrice, display_matrice, get_colors, get_ordre
+from utils.util import create_matrice, display_matrice, get_colors, get_ordre
 
 
 # fonction pout choisir la couleur

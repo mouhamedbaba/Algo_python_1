@@ -1,5 +1,5 @@
 # importation des FONCTION nessaisaires
-from utils import get_n, remove_unnecessary_space
+from utils.util import check_number_validity, clean_number, get_n, remove_unnecessary_space
 
 
 # FONCTION pour recuperer les numeros
@@ -7,35 +7,9 @@ def get_number() -> str:
     number = input("\nEntrez un numero : ")
     return number
 
-# FONCTION permettant de verifier la validite des numeros
-def check_number_validity(number: str | int) -> bool:
-    # creations du dictinaire des operateurs
-    operateurs = {
-        "orange" : "77",
-        "kirene": "78",
-        "free" : "76",
-        "expresso" : "70",
-        "promobile" : "75",
-        "fix" : "33"
-    }
-    prefix = number[0] + number[1]
-    if (prefix not in operateurs.values()):
-        return False
-    if len(number) != 9:
-        return False
-    if not number.isdigit():
-        return False
-    return True
 
-# FONCTION pour nettoyer les numeros
-def clean_number(number: str) -> str:
-    number = remove_unnecessary_space(number)
-    number = number.strip()
-    carracter_autorise = [" ", "-", "_", ".", ","]
-    for i in number :
-        if i in carracter_autorise:
-            number = number.replace(i, "")
-    return number
+
+
 
 # FONCTION permettant de saisir le nombre de numeros et de retourner la liste de numero valide et invalide
 def manage_number() -> list:

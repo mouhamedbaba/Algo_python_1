@@ -8,5 +8,3 @@ class Student():
         self.proj = proj
         self.exam = exam
         self.avg = (self.dev + self.proj + self.exam) / 3
-    def __str__(self) -> str:
-        return f"Etudiant : {self.first_name} {self.last_name}"

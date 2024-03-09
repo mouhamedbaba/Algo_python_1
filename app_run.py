@@ -1,12 +1,13 @@
 # importation des modules permettant de lancer un exercice
-
-from display_mounth import run_exo_1
-from remove_unness_espace import run_exo_2
-from manage_sentence import run_exo_3
-from manage_phone_numbers import run_exo_4
-from matrice_color_carre import run_exo_5
-from matrice_diagonal import run_exo_6
-from utils import display_menu
+from app.display_mounth import run_exo_1
+from app.remove_unness_espace import run_exo_2
+from app.manage_sentence import run_exo_3
+from app.manage_phone_numbers import run_exo_4
+from app.matrice_color_carre import run_exo_5
+from app.matrice_diagonal import run_exo_6
+from app.clavier import run_exo_7
+from students.app_student import App
+from utils.util import display_menu
 
 
 #  PROCEDURE permettant d'afficher le menu des exercice et de les lancer selon l'exercie choisie
@@ -19,6 +20,7 @@ def run():
         "5":" MATRICE COULEURS ",
         "6":" MATRICE Diagonal ", 
         "7":" CLAVIER TOUCHE ",
+        "8":" GESTION ETUDIANT ",
         "0":" QUITTER "
     }
     while True:
@@ -36,11 +38,16 @@ def run():
             run_exo_5()
         elif option == "6":
             run_exo_6()
+        elif option == "7":
+            run_exo_7()
+        elif option == "8":
+            app = App()
+            app.run_exo_8()
         elif option == "0":
-            print(" "*10 , "==============> AU REVOIR <===================")
+            print(" "*10 , "=================> AU REVOIR <===================")
             break
         else:
-            print("OPTION NON VALIDE")
+            print("\nOPTION NON VALIDE")
 
-#  appel a la fonction run pour executer le programe
+# appel a la fonction run pour executer le programe
 run()

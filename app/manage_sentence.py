@@ -1,5 +1,5 @@
 # importation des FONCTION nessaisaires
-from utils import remove_unnecessary_space, get_n, get_sentence
+from utils.util import remove_unnecessary_space, get_n, get_sentence
 
 
 # FONCTION permettant de saisir le nombre de phrase voulueet retourner la liste de phrases

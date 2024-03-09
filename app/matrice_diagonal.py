@@ -1,5 +1,5 @@
 # IMPORTATION des fonction de nessaisaire pour la matrice le le dictionnaire des couleurs
-from utils import create_matrice, display_matrice, display_menu, get_colors, get_ordre
+from utils.util import create_matrice, display_matrice, display_menu, get_colors, get_ordre
 
 
 # FONCTION pour recuperer la couleur a utiliser

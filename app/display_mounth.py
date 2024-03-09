@@ -20,7 +20,7 @@ def display_mount(mouth):
             print(f"{mouth[j][i]:10}", end="|\t")
         print("")
     print("-"*59)
-        
+
 
 # PROCEDURE permettant d'afficher le tableu de mois et de changer de langue
 def run_exo_1():
